@@ -1,5 +1,5 @@
+import 'package:calculadora/util/colors.dart';
 import 'package:flutter/material.dart';
-import '../util/colors.dart';
 
 class Button extends StatelessWidget {
   final String value;
@@ -8,30 +8,37 @@ class Button extends StatelessWidget {
   final void Function(String) cb;
 
   Button({
-    @required this.value, 
+    @required this.value,
     @required this.cb,
     this.big = false,
-    this.color = ThemeColor.GREY,
+    this.color = ThemeColor.NONE,
   });
 
   @override
   Widget build(BuildContext build) {
     return Expanded(
       flex: this.big ? 2 : 1,
-      child: Container(
-        margin: const EdgeInsets.only(top: 1, right: 1),
-        child: RaisedButton(
-          color: this.color,
-          child: Text(
-            this.value, 
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            )
+      child: Padding(
+        padding: EdgeInsets.all(5),
+        child: Container(
+          child: FlatButton(
+            color: this.color,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(100),
+            ),
+            child: Text(
+              this.value, 
+              style: TextStyle(
+                fontSize: 25,
+                color: this.color == ThemeColor.DARK ? ThemeColor.PRIMARY: ThemeColor.LIGHT,
+                fontFamily: 'Quicksand',
+                fontWeight: FontWeight.w200
+              )
+            ),
+            onPressed: () => this.cb(this.value),
           ),
-          onPressed: () => this.cb(this.value),
-        )
-      )
+        ),
+      ),
     );
   }
 }

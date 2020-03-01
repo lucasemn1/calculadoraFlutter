@@ -73,3 +73,18 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  fonts:
+    - family: Quicksand
+      fonts:
+        - asset: fonts/Quicksand-Regular.ttf
+        - asset: fonts/Quicksand-Bold.ttf
+        - asset: fonts/Quicksand-Light.ttf
+        - asset: fonts/Quicksand-Medium.ttf
+        - asset: fonts/Quicksand-SemiBold.ttf
+    - family: Karla
+      fonts:
+        - asset: fonts/Karla-Bold.ttf
+        - asset: fonts/Karla-BoldItalic.ttf
+        - asset: fonts/Karla-Italic.ttf
+        - asset: fonts/Karla-Regular.ttf

@@ -28,7 +28,7 @@ class Informacoes extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(top: 30, bottom: 10),
                 child: TextAbout(
-                  text: 'V. 0.0.1 - 29/02/2020',
+                  text: 'V. 0.0.1.2 - 01/03/2020',
                   size: 15,
                   center: true,
                 )

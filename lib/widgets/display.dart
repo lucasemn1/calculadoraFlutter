@@ -32,6 +32,8 @@ class Display extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 17,
+                    fontFamily: 'Quicksand',
+                    fontWeight: FontWeight.w400,
                     decoration: TextDecoration.none,
                   ),
                   textAlign: TextAlign.right,
@@ -51,34 +53,14 @@ class Display extends StatelessWidget {
                   textAlign: TextAlign.end,
                   style: TextStyle(
                       fontWeight: FontWeight.w100,
+                      fontFamily: 'Quicksand',
                       decoration: TextDecoration.none,
                       color: Color.fromRGBO(255, 255, 255, 1)),
                 ),
                 padding: const EdgeInsets.all(25),
               ),
-
-              /**
-               * Agrupador da informação do criador do aplicativo
-               */
-              RaisedButton(
-                color: ThemeColor.DARK,
-                onPressed: () {
-                  Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Informacoes()));
-                },
-                child: Text(
-                  'Sobre o aplicativo',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    decoration: TextDecoration.none,
-                  ),
-                  textAlign: TextAlign.center,
-                )
-              ),
-
-
             ],
+
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.end,
           )),

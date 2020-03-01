@@ -9,3 +9,8 @@ Projeto de calculadora com Flutter
 
 ### Rodando o projeto 
     $ flutter run
+
+## Últimas atualizações
+    <ol>
+        <li> Alterações na interface principal </li>
+    </ol>

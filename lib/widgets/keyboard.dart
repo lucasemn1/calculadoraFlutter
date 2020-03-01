@@ -11,42 +11,45 @@ class Keyboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) { 
     return Container(
-      height: 450,
-      child: Column(
-        children: <Widget>[
-          ButtonRow([
-            Button(value: 'AC', big: true, color: ThemeColor.DARK, cb: this.cb),
-            Button(value: 'C', color: ThemeColor.DARK, cb: this.cb),
-            Button(value: '/', color: ThemeColor.PRIMARY, cb: this.cb),
-          ]),
+      height: 400,
+      child: Padding(
+        padding: EdgeInsets.all(10),
+        child: Column(
+          children: <Widget>[
+            ButtonRow([
+              Button(value: 'AC', big: true, color: ThemeColor.DARK, cb: this.cb),
+              Button(value: 'C', color: ThemeColor.DARK, cb: this.cb),
+              Button(value: '/', color: ThemeColor.PRIMARY, cb: this.cb),
+            ]),
 
-          ButtonRow([
-            Button(value: '7', cb: this.cb),
-            Button(value: '8', cb: this.cb),
-            Button(value: '9', cb: this.cb),
-            Button(value: 'X', color: ThemeColor.PRIMARY, cb: this.cb),
-          ]),
+            ButtonRow([
+              Button(value: '7', cb: this.cb),
+              Button(value: '8', cb: this.cb),
+              Button(value: '9', cb: this.cb),
+              Button(value: 'X', color: ThemeColor.PRIMARY, cb: this.cb),
+            ]),
 
-          ButtonRow([
-            Button(value: '4', cb: this.cb),
-            Button(value: '5', cb: this.cb),
-            Button(value: '6', cb: this.cb),
-            Button(value: '-', color: ThemeColor.PRIMARY, cb: this.cb),
-          ]),
+            ButtonRow([
+              Button(value: '4', cb: this.cb),
+              Button(value: '5', cb: this.cb),
+              Button(value: '6', cb: this.cb),
+              Button(value: '-', color: ThemeColor.PRIMARY, cb: this.cb),
+            ]),
 
-          ButtonRow([
-            Button(value: '1', cb: this.cb),
-            Button(value: '2', cb: this.cb),
-            Button(value: '3', cb: this.cb),
-            Button(value: '+', color: ThemeColor.PRIMARY, cb: this.cb),
-          ]),
+            ButtonRow([
+              Button(value: '1', cb: this.cb),
+              Button(value: '2', cb: this.cb),
+              Button(value: '3', cb: this.cb),
+              Button(value: '+', color: ThemeColor.PRIMARY, cb: this.cb),
+            ]),
 
-          ButtonRow([
-            Button(value: '0', big: true, cb: this.cb),
-            // Button(value: ',', cb: this.cb),
-            Button(value: '=', big: true, color: ThemeColor.PRIMARY, cb: this.cb),
-          ]),
-        ],
+            ButtonRow([
+              Button(value: '0', big: true, cb: this.cb),
+              // Button(value: ',', cb: this.cb),
+              Button(value: '=', big: true, color: ThemeColor.PRIMARY, cb: this.cb),
+            ]),
+          ],
+        ),
       ),
     );
   }
