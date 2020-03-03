@@ -1,9 +1,12 @@
+import 'package:calculadora/util/util_functions.dart';
+import 'package:flutter/material.dart';
+
 class Memory {
   String buffer;
   String value;
   String operation;
   static const OPERATIONS = ['+', 'X', '-', '/', '%'];
-
+  
   Memory({this.value = '0', this.buffer='0', this.operation='+'});
 
   /**
@@ -18,13 +21,38 @@ class Memory {
     if( value == 'AC'){
       this._allClear();
     }
+
     else if( value == 'C'){
       this.value = '0';
     }
+    
+    // Removendo último dígito
+    else if( value == 'DEL'){
+      this.value = this.value.length > 1 ? 
+        this.value = this.value.substring(0, this.value.length - 1): 
+        this.value = '0';
+    }
+
+    // Tratando valores decimais
+    else if( value == ',' ){
+      if ( Util.isNumberInt(num.parse(this.value)) && this.value.indexOf('.') == -1 ) {
+        this.value += '.';
+      }
+    }
+
     //Faz o resultado
     else if ( value == '=' ){
-      this.value = this._calculate().toString();
+      if ( this.operation == '/' && this.value == '0' ) {
+        //Aqui vai ficar o código de validação de um número dividido por 0 
+      }
+
+      num calc = this._calculate();
+
+      this.value = Util.isNumberInt(calc) ? 
+        this.value = calc.toInt().toString() : 
+        this.value = calc.toString();
     }
+
     //Valor para o buffer
     else if ( OPERATIONS.contains(value) ){
       this._operate(value);

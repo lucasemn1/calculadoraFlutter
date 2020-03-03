@@ -2,7 +2,7 @@ import 'package:calculadora/util/colors.dart';
 import 'package:calculadora/widgets/text_about.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../widgets/link_icon.dart';
+import 'package:calculadora/widgets/link_icon.dart';
 
 class Informacoes extends StatelessWidget {
   @override
@@ -28,7 +28,7 @@ class Informacoes extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(top: 30, bottom: 10),
                 child: TextAbout(
-                  text: 'V. 0.0.1.2 - 01/03/2020',
+                  text: 'V. 0.0.1.3 - 02/03/2020',
                   size: 15,
                   center: true,
                 )

@@ -8,17 +8,25 @@ class Keyboard extends StatelessWidget {
   final void Function(String) cb;
   Keyboard(this.cb);
 
+  double _calculateHeight(BuildContext context) {
+    return MediaQuery.of(context).size.height <= 720 ? 300 : 400;
+  }
+
   @override
   Widget build(BuildContext context) { 
+
+    double height = this._calculateHeight(context);
+
     return Container(
-      height: 400,
+      height: height.toDouble(),
       child: Padding(
         padding: EdgeInsets.all(10),
         child: Column(
           children: <Widget>[
             ButtonRow([
-              Button(value: 'AC', big: true, color: ThemeColor.DARK, cb: this.cb),
+              Button(value: 'AC', color: ThemeColor.DARK, cb: this.cb),
               Button(value: 'C', color: ThemeColor.DARK, cb: this.cb),
+              Button(value: 'DEL', color: ThemeColor.DARK, cb: this.cb),
               Button(value: '/', color: ThemeColor.PRIMARY, cb: this.cb),
             ]),
 
@@ -44,7 +52,8 @@ class Keyboard extends StatelessWidget {
             ]),
 
             ButtonRow([
-              Button(value: '0', big: true, cb: this.cb),
+              Button(value: '0', cb: this.cb),
+              Button(value: ',', cb: this.cb, color: ThemeColor.DARK,),
               // Button(value: ',', cb: this.cb),
               Button(value: '=', big: true, color: ThemeColor.PRIMARY, cb: this.cb),
             ]),

@@ -36,7 +36,11 @@ class _CalculatorState extends State<Calculator> {
         child: Column(
         children: <Widget>[
             Topbar(),
-            Display(value: memory.getValue(), buffer: memory.buffer, operation: memory.operation),
+            Display(
+              value: memory.getValue(), 
+              buffer: memory.buffer, 
+              operation: memory.operation
+            ),
             Keyboard(this._onPressed),
           ]
         )
