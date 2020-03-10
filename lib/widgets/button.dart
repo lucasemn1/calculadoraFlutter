@@ -19,6 +19,10 @@ class Button extends StatelessWidget {
     return MediaQuery.of(context).size.height;
   }
 
+  void _action(){
+    this.cb(this.value);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -34,13 +38,13 @@ class Button extends StatelessWidget {
             child: Text(
               this.value, 
               style: TextStyle(
-                fontSize: this._calculateFontSize(context) <= 720 ? 15: 25,
+                fontSize: this._calculateFontSize(context) <= 720 ? 15: 20,
                 color: this.color == ThemeColor.DARK ? ThemeColor.PRIMARY: ThemeColor.LIGHT,
                 fontFamily: 'Quicksand',
                 fontWeight: FontWeight.w200
               )
             ),
-            onPressed: () => this.cb(this.value),
+            onPressed: () => this._action(),
           ),
         ),
       ),

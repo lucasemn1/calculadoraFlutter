@@ -7,7 +7,6 @@ import '../widgets/keyboard.dart';
 import '../widgets/topbar.dart';
 import 'package:flutter/material.dart';
 
-
 class Calculator extends StatefulWidget {
   @override
   _CalculatorState createState() => _CalculatorState();
