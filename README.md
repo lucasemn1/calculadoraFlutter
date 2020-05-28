@@ -5,11 +5,11 @@ Este projeto tem como objetivo o estudo do Flutter. Foi meu primeiro contato com
 
 <p align="center">
 
-![Apresentação: o aplicativo](https://raw.githubusercontent.com/lucasemn1/calculadoraFlutter/master/apresentacao.jpg)
+<img alt="Apresentação: print da calculadora" src="https://raw.githubusercontent.com/lucasemn1/calculadoraFlutter/master/apresentacao.jpg" />
 
 </p>
 
-# Dependências
+## Dependências
 
 * [Flutter](https://flutter.dev/docs/get-started/install)
 
