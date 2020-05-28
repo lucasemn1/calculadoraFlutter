@@ -3,9 +3,9 @@
 ## Sobre o projeto
 Este projeto tem como objetivo o estudo do Flutter. Foi meu primeiro contato com essa plataforma e posso dizer que a proposta inicial de construir uma calculadora foi bem sucedida.
 
-<div class='center'>
+<p class='center'>
 ![Apresentação: o aplicativo](https://raw.githubusercontent.com/lucasemn1/calculadoraFlutter/master/apresentacao.jpg)
-</div>
+</p>
 
 # Dependências
 
