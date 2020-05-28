@@ -9,11 +9,15 @@ Este projeto tem como objetivo o estudo do Flutter. Foi meu primeiro contato com
 
 </p>
 
-## Dependências
+## 💻 Tecnologias
+
+* Flutter
+
+## ❗ Dependências
 
 * [Flutter](https://flutter.dev/docs/get-started/install)
 
-## Tutorial de execução
+## 📝 Tutorial de execução
 
 1. Tenha o emulador Android ou iOS aberto no seu computador.
 
